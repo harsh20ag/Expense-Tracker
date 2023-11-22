@@ -1,0 +1,59 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+ 
+ body {
+   font-family: 'Arial', sans-serif; /* Add a default font-family */
+ }
+ 
+ .content {
+   min-height: 100vh; /* Set a minimum height to ensure content fills the screen */
+ }
+ 
+ .filters {
+   display: flex;
+   flex-direction: column; /* Change to column for mobile view */
+   align-items: center;
+   padding: 15px 20px;
+   box-shadow: 0 0 3px gray;
+   margin-bottom: 10px;
+ }
+ 
+ .switch-icons {
+   border: 1px solid rgba(0, 0, 0, 0.677);
+   border-radius: 5px;
+   padding: 10px 15px;
+   margin-top: 10px; /* Add margin for better separation in mobile view */
+ }
+ 
+ .anticon svg {
+   font-size: 20px;
+   cursor: pointer;
+ }
+ 
+ .active-icon {
+   color: black;
+ }
+ 
+ .inactive-icon {
+   color: gray;
+ }
+ 
+ .filter-tab .ant-select-selector {
+   width: 100%; /* Make the selector full width in mobile view */
+ }
+ 
+ /* Media query for laptop/desktop view */
+ @media (min-width: 768px) {
+   .filters {
+     flex-direction: row; /* Change back to row for laptop view */
+     justify-content: space-between;
+   }
+ 
+   .switch-icons {
+     margin-top: 0; /* Remove margin in laptop view */
+   }
+ }
+ 
